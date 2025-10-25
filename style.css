@@ -1,0 +1,169 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0b0b3b, #000);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+}
+h1, h2 {
+  color: #d896ff;
+  text-shadow: 0 0 10px #d896ff;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+}
+nav a {
+  color: #d896ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  text-shadow: 0 0 10px #ffccff;
+}
+
+/* SECTIONS */
+section {
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.images img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  transition: 0.4s;
+}
+.images img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px #d896ff;
+}
+
+/* PLANETS */
+.planet-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.planet-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;
+  transition: 0.3s;
+}
+.planet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #d896ff;
+}
+.planet-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FACTS */
+.facts ul {
+  list-style: "✨ ";
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+/* QUOTES */
+blockquote {
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid #d896ff;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+  font-style: italic;
+}
+
+/* CONTACT */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+input, textarea {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+button {
+  background: #d896ff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #b14fff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+}
+#toTop {
+  margin-top: 10px;
+  background: #d896ff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
